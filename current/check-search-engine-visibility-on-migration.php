@@ -37,7 +37,7 @@ function csevom_add_admin_stylesheet() {
 /* THIS FUNCTION CREATES THE MENU IN THE "SETTINGS" SECTION OF WORDPRESS */
 function csevom_menus() {
 
-  add_options_page('Check/Set Domain Visibility', 'Check/Set Domain Visibility', 8, 'csevomoptions', 'csevom_options');
+  add_options_page('Check/Set Domain Visibility', 'Check/Set Domain Visibility', 'manage_options', 'csevomoptions', 'csevom_options');
 
 }
 
