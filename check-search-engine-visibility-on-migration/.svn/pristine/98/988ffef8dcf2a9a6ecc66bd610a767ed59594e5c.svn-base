@@ -3,7 +3,7 @@
 Plugin Name:  Check Search Engine Visibility on Migration
 Plugin URI: http://winwar.co.uk/plugins/check-search-engine-visibility-migration/
 Description:  Checks if a site has been migrated and if it's inivisible to search engines. If so, then the site warns you on this and notifies you to act.
-Version:      0.2.3
+Version:      0.2
 Author:       Rhys Wynne
 Author URI:   http://winwar.co.uk/
 
@@ -37,7 +37,7 @@ function csevom_add_admin_stylesheet() {
 /* THIS FUNCTION CREATES THE MENU IN THE "SETTINGS" SECTION OF WORDPRESS */
 function csevom_menus() {
 
-  add_options_page('Check/Set Domain Visibility', 'Check/Set Domain Visibility', 'manage_options', 'csevomoptions', 'csevom_options');
+  add_options_page('Check/Set Domain Visibility', 'Check/Set Domain Visibility', 8, 'csevomoptions', 'csevom_options');
 
 }
 
@@ -88,9 +88,9 @@ function csevom_options() {
                             <?php $oldurl = get_option('csevom-oldurl'); 
                             if ($oldurl)
                             {
-                               $oldurl = strrev($oldurl);
+                               $oldurl = base64_decode($oldurl);
                             }
-                            $currenturl = strrev(get_option('home')); ?>
+                            $currenturl = base64_encode(get_option('home')); ?>
                             
                             <table class="form-table">
                                 <tbody>
@@ -248,7 +248,7 @@ function csevom_admin_notice() {
     
     if ($visibility == 0)
     {
-        $oldurl = strrev(get_option('csevom-oldurl')); 
+        $oldurl = get_option('csevom-oldurl'); 
         $readingpageurl = get_admin_url('', 'options-reading.php');
         $optionspageurl = get_admin_url('', 'options-general.php?page=csevomoptions');
             if ($oldurl)

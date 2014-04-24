@@ -2,8 +2,8 @@
 Tags: seo, migration, database, search engines, blog visibility, visibility, robots.txt
 Requires at least: 3.0
 Tested up to: 3.7.1
-Version: 0.2.2
-Stable tag: 0.2.2
+Version: 0.2.3
+Stable tag: 0.2.3
 Contributors: rhyswynne
 Donate link: http://winwar.co.uk/plugins/check-search-engine-visibility-migration/#donate
 Description: Checks if a site has been migrated and if it's inivisible to search engines. If so, then the site warns you to review this setting.
@@ -32,6 +32,9 @@ Why don't you?
 3. If your site is invisible to search engines, a big error box appears on the top of the screen. It will instruct you on what to do after that.
 
 == Change Log ==
+= 0.2.3 (24/04/14) = 
+* Use capability instead of depreciated role for menu (big thanks to [Bill Erickson](http://www.billerickson.net/))
+
 = 0.2.2 (04/12/13) = 
 * Switched from base64 encode/decode to strrev to handle the encoding of the string so the plugin doesn't set off any false positives.
 

@@ -3,7 +3,7 @@
 Plugin Name:  Check Search Engine Visibility on Migration
 Plugin URI: http://winwar.co.uk/plugins/check-search-engine-visibility-migration/
 Description:  Checks if a site has been migrated and if it's inivisible to search engines. If so, then the site warns you on this and notifies you to act.
-Version:      0.2.3
+Version:      0.2.2
 Author:       Rhys Wynne
 Author URI:   http://winwar.co.uk/
 
@@ -37,7 +37,7 @@ function csevom_add_admin_stylesheet() {
 /* THIS FUNCTION CREATES THE MENU IN THE "SETTINGS" SECTION OF WORDPRESS */
 function csevom_menus() {
 
-  add_options_page('Check/Set Domain Visibility', 'Check/Set Domain Visibility', 'manage_options', 'csevomoptions', 'csevom_options');
+  add_options_page('Check/Set Domain Visibility', 'Check/Set Domain Visibility', 8, 'csevomoptions', 'csevom_options');
 
 }
 
